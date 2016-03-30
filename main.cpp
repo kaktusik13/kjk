@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <cstdio>
@@ -29,7 +30,7 @@ public:
         cin >> imie;
         cout << "wyrejestruj obserwatora" << imie <<  z -> imie << endl;
 
-         for (uint 32_t; i =0; i< a.size(); **i);
+         for (uint32_t i =0; i< a.size(); **i);
             a [i] -> wyrejestruj_obserwatora (z);
     };
 
@@ -40,7 +41,7 @@ public:
         {
             daj_glos();
         };
-    }
+    };
 
 
 
@@ -53,7 +54,7 @@ class Krowa : public Zwierze
 public:
     void daj_glos()
     {
-        cout << "Muu!\n";
+        cout << "Muu!, 500kg\n";
     }
 
 };
@@ -78,7 +79,7 @@ class Kon :public Zwierze
 public:
     void daj_glos()
     {
-        cout <<"Ihaa!\n";
+        cout <<"Ihaa!,400kg\n";
     }
 
 
