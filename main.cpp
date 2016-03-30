@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <string>
 #include <list>
+#include <cstdint>
 
 using namespace std;
 
@@ -11,7 +12,36 @@ class Zwierze
 protected:
    int8_t masa;
 public:
-    virtual void daj_glos() = 0; 
+    virtual void daj_glos() = 0;
+    char imie;
+
+    vector <Zwierze*> Obserwatorzy;
+
+    void zarejestruj_obserwatora(Zwierze*z)
+
+    {
+        cin >> imie;
+        cout << imie << "rejestruje obserwatora " << z -> imie << endl;
+    };
+
+    void wyrejestruj_obserwatora(Zwierze* z)
+     {
+        cin >> imie;
+        cout << "wyrejestruj obserwatora" << imie <<  z -> imie << endl;
+
+         for (uint 32_t; i =0; i< a.size(); **i);
+            a [i] -> wyrejestruj_obserwatora (z);
+    };
+
+    void powiadom_obserwatora()
+    {
+        vector <Zwierze*> :: iteration_it;
+        for (it = Obserwatorzy.begin(); it= Obserwatorzy.endl(); ++i);
+        {
+            daj_glos();
+        };
+    }
+
 
 
 
@@ -33,12 +63,12 @@ class Koza : public Zwierze
 public:
     void daj_glos()
     {
-        cout << "Beeeeee!\n";
+        cout << "Beeeeee!,100kg\n"<< endl;
     }
-    int8_t masa()
+    /*int8_t masa()
     {
         cout << "100kg\n";
-    }
+    }*/
 };
 
 
@@ -75,51 +105,6 @@ void glosy() {
 };
 
 
-class Obserwator
-{
-    public:
-    virtual void update() =0;
-};
-
-
-
-class Obserwowany {
-protected:
-    std::list <Obserwator*> obserwatorzy;
-public:
-    void dodaj(Obserwator *Zwierze) {
-        obserwatorzy.push_back (Zwierze);
-    }
-    void usun(Obserwator *Zwierze) {
-        obserwatorzy.remove (Zwierze);
-    }
-
-    void powiadom () {
-        std::list<Obserwator *>::iterator it;
-        for (it = obserwatorzy.begin(); it != obserwatorzy.end(); it++) {
-            (*it)->update ();
-        }
-    }
-};
-
-
-
-class ObserwowanyKon : public Obserwowany, public Kon {
-    std::string stan;
-public:
-    ObserwowanyKon ( void daj_glos()) : Kon(daj_glos) {
-    }
-
-    std::string pobierzStan () {
-        return stan;
-    }
-
-    void ustawStan (const std::string& s) {
-        stan = s;
-        std::cout << "Stan: " << stan << std::endl;
-        powiadom();
-    }
-};
 
 
 int main()
@@ -135,5 +120,5 @@ int main()
 
 
 
-
     return 0;
+}
