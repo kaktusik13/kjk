@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <string>
 #include <list>
-#include <cstdint>
+//#include <cstdint>
 
 using namespace std;
 
